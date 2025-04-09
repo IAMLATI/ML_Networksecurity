@@ -18,3 +18,5 @@ conda activate  venv
 create .env file 
 
 add .env and venv in the gitignore file
+
+include --init--.py in all folder under the sub-folder
