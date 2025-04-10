@@ -20,3 +20,8 @@ create .env file
 add .env and venv in the gitignore file
 
 include --init--.py in all folder under the sub-folder
+
+Open a mangoDB account
+
+python -m pip install "pymongo[srv]"==3.6
+Add MONGO_DB_URL= to .env
