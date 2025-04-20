@@ -25,3 +25,8 @@ Open a mangoDB account
 
 python -m pip install "pymongo[srv]"==3.6
 Add MONGO_DB_URL= to .env
+create the push_data. py loading the data to mongodb
+then data ingestion
+create config_entity.py under entity
+
+create DataIngestionconfig: and TrainingPipelineconfig
