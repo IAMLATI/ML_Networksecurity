@@ -30,3 +30,9 @@ then data ingestion
 create config_entity.py under entity
 
 create DataIngestionconfig: and TrainingPipelineconfig
+
+read the data from the mongoDB, feature store, split the data
+
+go to data_ingestion
+
+the create a artifact_entity.py
