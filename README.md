@@ -36,3 +36,11 @@ read the data from the mongoDB, feature store, split the data
 go to data_ingestion
 
 the create a artifact_entity.py
+
+create data validation, check the status of train and test
+
+create data validation.py under component
+
+create a data_schema folder then schema.yaml
+
+create a utils .py under main_utils
