@@ -44,3 +44,7 @@ create data validation.py under component
 create a data_schema folder then schema.yaml
 
 create a utils .py under main_utils
+
+Data transformation
+
+create a class under config _entity
