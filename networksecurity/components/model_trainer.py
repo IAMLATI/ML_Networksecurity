@@ -79,7 +79,7 @@ class ModelTrainer:
             
         }
 
-        model_report:dict=evaluate_models(x_train=x_train,y_train=y_train,x_test=x_test, y_test=y_test, models=models, param=params)
+        model_report:dict=evaluate_models(X_train=x_train,y_train=y_train,X_test=x_test, y_test=y_test, models=models, param=params)
 
         best_model_score=max(sorted(model_report.values()))
 
@@ -105,7 +105,7 @@ class ModelTrainer:
         Network_Model=NetworkModel(preprocessor=preprocessor, model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path, obj=Network_Model)
 
-        save_object("final_model/model.pkl", best_model)
+        save_object("finals_model/model.pkl", best_model)
 
         ## Model Trainer Artifact
         model_trainer_artifact= ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
