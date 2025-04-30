@@ -60,7 +60,7 @@ def load_object(file_path:str,)-> object:
             print(file_obj)
             return pickle.load(file_obj)
     except Exception as e:
-        raise NetworkSecurityException(e,sys)
+        raise NetworkSecurityException(e,sys) from e
     
 def load_numpy_array_data(file_path: str) -> np.array:
     """

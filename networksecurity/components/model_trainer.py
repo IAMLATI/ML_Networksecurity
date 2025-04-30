@@ -36,10 +36,10 @@ class ModelTrainer:
             precision_score=classificationmetric.precision_score
             recall_score=classificationmetric.recall_score
 
-            mlflow.log_metrics("f1_score",f1_score)
-            mlflow.log_metrics("precision",precision_score)
-            mlflow.log_metrics("recall_score",recall_score)
-            mlflow.sklearn.load_model(best_model, "model")
+            mlflow.log_metric("f1_score",f1_score)
+            mlflow.log_metric("precision",precision_score)
+            mlflow.log_metric("recall_score",recall_score)
+            mlflow.sklearn.log_model(best_model, "model")
         
     def train_model(self,x_train,y_train, x_test,y_test):
         models={
@@ -103,7 +103,7 @@ class ModelTrainer:
         os.makedirs(model_dir_path,exist_ok=True)
 
         Network_Model=NetworkModel(preprocessor=preprocessor, model=best_model)
-        save_object(self.model_trainer_config.trained_model_file_path, obj=NetworkModel)
+        save_object(self.model_trainer_config.trained_model_file_path, obj=Network_Model)
 
         save_object("final_model/model.pkl", best_model)
 
